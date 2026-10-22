@@ -1,154 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Star Wars Noticias y Novedades: las últimas noticias sobre películas, series, animación, libros, juegos y eventos del universo Star Wars."
+    />
     <title>Star Wars - Noticias y Novedades</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- ENCABEZADO Y NAVEGACIÓN -->
     <header>
-        <a href="#">HOME</a>
-        <!-- BOTÓN MODO OSCURO (ALINEADO A LA IZQUIERDA) -->
-<div align="right">
-    <button id="toggle-theme">Cambiar Modo Oscuro / Claro</button>
-</div>
-
-<script>
-    const btnTheme = document.getElementById('toggle-theme');
-    btnTheme.addEventListener('click', () => {
-        if (document.body.style.backgroundColor === 'black') {
-            document.body.style.backgroundColor = 'white';
-            document.body.style.color = 'black';
-        } else {
-            document.body.style.backgroundColor = 'black';
-            document.body.style.color = 'white';
-        }
-    });
-</script>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Películas</a></li>
-                <li><a href="#">Series de TV</a></li>
-                <li><a href="#">Animación</a></li>
-                <li><a href="#">Libros y Cómics</a></li>
-                <li><a href="#">Juegos y Juguetes</a></li>
-                <li><a href="#">Parques y Eventos</a></li>
-                <li><a href="#">Editoriales</a></li>
-            </ul>
-        </nav>
-        <form role="search">
-            <input type="search" placeholder="Buscar..." aria-label="Buscar">
-            <button type="submit">Buscar</button>
-        </form>
+      <a href="index.html">HOME</a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#peliculas">Películas</a></li>
+          <li><a href="#series">Series de TV</a></li>
+          <li><a href="#animacion">Animación</a></li>
+          <li><a href="#libros">Libros y Cómics</a></li>
+          <li><a href="#juegos">Juegos y Juguetes</a></li>
+          <li><a href="#parques">Parques y Eventos</a></li>
+          <li><a href="#editoriales">Editoriales</a></li>
+        </ul>
+      </nav>
+      <form role="search">
+        <input
+          type="search"
+          placeholder="Buscar..."
+          aria-label="Buscar en Star Wars Noticias"
+        />
+        <button type="submit">Buscar</button>
+      </form>
     </header>
-
+    <br /><br />
     <!-- CONTENIDO PRINCIPAL -->
     <main>
+      <!-- SECCIÓN: ÚLTIMAS NOTICIAS -->
+      <section id="noticias" aria-labelledby="titulo-noticias">
+        <h2 id="titulo-noticias">ÚLTIMAS NOTICIAS</h2>
 
-        <!-- SECCIÓN: ÚLTIMAS NOTICIAS -->
-        <section>
-            <h2>ÚLTIMAS NOTICIAS</h2>
+        <!-- Noticia Principal (Hero) -->
+        <article aria-labelledby="titulo-superbowl-hero">
+          <a
+            href="noticia-superbowl.html"
+            aria-label="Leer noticia: Star Wars Funday Football Super Bowl LXI"
+          >
+            <figure>
+              <img
+                src="assets/images/SWSuperBowl.webp"
+                alt="Imagen promocional de Star Wars Funday Football para la Super Bowl LXI"
+                width="600"
+              />
+              <figcaption>
+                'Star Wars Funday Football' – Super Bowl LXI
+              </figcaption>
+            </figure>
+            <h3 id="titulo-superbowl-hero">
+              'Star Wars Funday Football', Animación en Tiempo Real de la Super
+              Bowl LXI, Anunciada
+            </h3>
+          </a>
+          <p>
+            <time datetime="2026-10-22">22 de octubre de 2026</time> | Por
+            Federico
+          </p>
+        </article>
+        <br /><br />
+        <!-- Grilla de Noticias Secundarias -->
+        <div>
+          <article aria-labelledby="titulo-kylo">
+            <a
+              href="noticia-kylo-ren.html"
+              aria-label="Leer reseña: The Fall of Kylo Ren #3"
+            >
+              <figure>
+                <img
+                  src="assets/images/KyloRen.webp"
+                  alt="Kylo Ren con su sable de luz cruzado"
+                  width="300"
+                />
+                <figcaption>The Fall of Kylo Ren #3</figcaption>
+              </figure>
+              <h3 id="titulo-kylo">
+                Reseña: 'The Fall of Kylo Ren' #3 se toma un descanso para un
+                flashback de los Knights of Ren
+              </h3>
+            </a>
+            <p>
+              <time datetime="2026-10-22">22 de octubre de 2026</time> | Por
+              Federico | 0 comentarios
+            </p>
+          </article>
+          <br /><br />
+          <article aria-labelledby="titulo-battlefront">
+            <a
+              href="noticia-battlefront.html"
+              aria-label="Leer noticia: Star Wars Battlefront 3"
+            >
+              <figure>
+                <img
+                  src="assets/images/StormtrooperBattlefront.webp"
+                  alt="Stormtrooper en el campo de batalla de Star Wars Battlefront"
+                  width="300"
+                />
+                <figcaption>Star Wars: Battlefront 3 en desarrollo</figcaption>
+              </figure>
+              <h3 id="titulo-battlefront">
+                Respawn y DICE Studios trabajando en 'Star Wars: Battlefront 3',
+                mientras BioWare se desmorona
+              </h3>
+            </a>
+            <p>
+              <time datetime="2026-10-22">22 de octubre de 2026</time> | Por
+              Federico | 2 comentarios
+            </p>
+          </article>
+          <br /><br />
+          <article aria-labelledby="titulo-vader">
+            <a
+              href="noticia-vader.html"
+              aria-label="Leer reseña: Star Wars Icons Vader"
+            >
+              <figure>
+                <img
+                  src="assets/images/DarthVader.webp"
+                  alt="Darth Vader con su casco icónico en primer plano"
+                  width="300"
+                />
+                <figcaption>Star Wars Icons: Vader</figcaption>
+              </figure>
+              <h3 id="titulo-vader">
+                Reseña: 'Star Wars Icons: Vader' es una celebración única de uno
+                de los personajes más grandes de la historia del cine
+              </h3>
+            </a>
+            <p>
+              <time datetime="2026-10-22">22 de octubre de 2026</time> | Por
+              Federico | 2 comentarios
+            </p>
+          </article>
+          <br /><br />
+          <article aria-labelledby="titulo-superbowl-grilla">
+            <a
+              href="noticia-superbowl.html"
+              aria-label="Leer noticia: Star Wars Funday Football Super Bowl LXI"
+            >
+              <figure>
+                <img
+                  src="assets/images/SWSuperBowl.webp"
+                  alt="Imagen promocional de Star Wars Funday Football para la Super Bowl LXI"
+                  width="300"
+                />
+                <figcaption>
+                  'Star Wars Funday Football' – Super Bowl LXI
+                </figcaption>
+              </figure>
+              <h3 id="titulo-superbowl-grilla">
+                'Star Wars Funday Football', Animación en Tiempo Real de la
+                Super Bowl LXI, Anunciada
+              </h3>
+            </a>
+            <p>
+              <time datetime="2026-10-22">22 de octubre de 2026</time> | Por
+              Federico | 0 comentarios
+            </p>
+          </article>
+        </div>
 
-            <!-- Noticia Principal (Hero) -->
-            <article>
-                <img src="/assets/images/SWSuperBowl.webp" alt="'Star Wars Funday Football' Super Bowl LXI" width="600">
-                <header>
-                    <h3>'Star Wars Funday Football', Animación en Tiempo Real de la Super Bowl LXI, Anunciada</h3>
+        <a href="#">VER TODAS LAS ÚLTIMAS NOTICIAS</a>
+      </section>
 
-                    <p><time datetime="2026-10-22">22 de octubre de 2026</time> | Por Federico</p>
-                </header>
-            </article>
-<br><br>
-            <!-- Grilla de Noticias Secundarias -->
-            <div>
-                <article>
-                    <img src="/assets/images/KyloRen.webp" alt="Kylo Ren" width="300">
-                    <h3>Reseña: 'The Fall of Kylo Ren' #3 se toma un descanso para un flashback de los Knights of Ren</h3>
-                    <p><time datetime="2026-10-22">22 de octubre de 2026</time> | Por Federico | 0 comentarios</p>
-                </article>
-<br><br>
-                <article>
-                    <img src="/assets/images/StormtrooperBattlefront.webp" alt="Stormtrooper Battlefront" width="300">
-                    <h3>Respawn y DICE Studios trabajando en 'Star Wars: Battlefront 3', mientras BioWare se desmorona</h3>
-                    <p><time datetime="2026-10-22">22 de octubre de 2026</time> | Por Federico | 2 comentarios</p>
-                </article>
-<br><br>
-                <article>
-                    <img src="/assets/images/DarthVader.webp" alt="Darth Vader" width="300">
-                    <h3>Reseña: 'Star Wars Icons: Vader' es una celebración única de uno de los personajes más grandes de la historia del cine</h3>
-                    <p><time datetime="2026-10-22">22 de octubre de 2026</time> | Por Federico | 2 comentarios</p>
-                </article>
-<br><br>
-                <article>
-                    <img src="/assets/images/SWSuperBowl.webp" alt="Juguetes de Star Wars" width="300">
-                    <h3>'Star Wars Funday Football', Animación en Tiempo Real de la Super Bowl LXI, Anunciada</h3>
-                    <p><time datetime="2026-10-22">22 de octubre de 2026</time> | Por Federico | 0 comentarios</p>
-                </article>
-                
-            </div>
+      <!-- SECCIÓN: THE MANDALORIAN AND GROGU -->
+      <section id="mandalorian" aria-labelledby="titulo-mandalorian">
+        <h2 id="titulo-mandalorian">THE MANDALORIAN AND GROGU</h2>
+        <figure>
+          <img
+            src="assets/images/Grogu.webp"
+            alt="Grogu y el Mandaloriano caminando juntos"
+            width="600"
+          />
+          <figcaption>
+            The Mandalorian and Grogu – próximamente en cines
+          </figcaption>
+        </figure>
+      </section>
+      <br /><br />
 
-            <a href="#">VER TODAS LAS ÚLTIMAS NOTICIAS</a>
-        </section>
-        
+      <!-- BARRA LATERAL (CONTADOR) -->
+      <aside aria-label="Cuenta regresiva para Star Wars Celebration 2027">
+        <h2>STAR WARS CELEBRATION 2027</h2>
+        <div>
+          <p><strong>160</strong> Días</p>
+          <p><strong>10</strong> Horas</p>
+          <p><strong>01</strong> Minutos</p>
+          <p><strong>08</strong> Segundos</p>
+        </div>
+      </aside>
 
-        <!-- SECCIÓN: THE MANDALORIAN AND GROGU + CONTADOR -->
-        <section>
-            <div>
-                <h2>THE MANDALORIAN AND GROGU</h2>
-                <article>
-                    <img src="/assets/images/Grogu.webp" alt="The Mandalorian y Grogu" width="600">
-                </article>
-            </div>
-
-<!-- BARRA LATERAL (CONTADOR) -->
-            <aside >
-                <h2>STAR WARS CELEBRATION 2027</h2>
-                <div>
-                    <p><strong>160</strong> Días</p>
-                    <p><strong>10</strong> Horas</p>
-                    <p><strong>01</strong> Minutos</p>
-                    <p><strong>08</strong> Segundos</p>
-                </div>
-            </aside>
-        </section>
-        <br><br>
-
-           <!-- SECCIÓN DE CONTACTO Y SUSCRIPCIÓN -->
-        <section id="contacto">
-            <center>
-                <h2>CONTACTO Y SUSCRIPCIÓN</h2>
-                <form action="#" method="post">
-                    <p>
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="nombre" name="first_name" placeholder="Tu nombre" required>
-                    </p>
-                    <p>
-                        <label for="email">Correo Electrónico:</label><br>
-                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                    </p>
-                    <p>
-                        <label for="mensaje">Mensaje o Comentario:</label><br>
-                        <textarea id="mensaje" name="message" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
-                    </p>
-                    <p>
-                        <button type="submit">Enviar Mensaje</button>
-                    </p>
-                </form>
-            </center>
-        </section>
-
+      <!-- SECCIÓN DE CONTACTO Y SUSCRIPCIÓN -->
+      <section style="text-align: center" id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">CONTACTO Y SUSCRIPCIÓN</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Tus datos de contacto</legend>
+            <p>
+              <label for="nombre">Nombre:</label><br />
+              <input
+                type="text"
+                id="nombre"
+                name="first_name"
+                placeholder="Tu nombre"
+                required
+                autocomplete="given-name"
+              />
+            </p>
+            <p>
+              <label for="email">Correo Electrónico:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+                autocomplete="email"
+              />
+            </p>
+            <p>
+              <label for="mensaje">Mensaje o Comentario:</label><br />
+              <textarea
+                id="mensaje"
+                name="message"
+                rows="4"
+                placeholder="Escribe tu mensaje..."
+                required
+              ></textarea>
+            </p>
+            <p>
+              <button type="submit">Enviar Mensaje</button>
+            </p>
+          </fieldset>
+        </form>
+      </section>
     </main>
-<br><br>
+    <br /><br />
 
     <!-- PIE DE PÁGINA -->
     <footer>
-        <center>
-            <p>&copy; 2026 Lucasfilm Ltd. Todos los derechos reservados.</p>
-        </center>
+      <p style="text-align: center">
+        &copy; 2026 Lucasfilm Ltd. Todos los derechos reservados.
+      </p>
     </footer>
-
-</body>
+  </body>
 </html>
